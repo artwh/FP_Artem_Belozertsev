@@ -7,10 +7,6 @@ a {
     color: #232233;
 }
 
-body {
-    max-width: 1440px;
-}
-
 .main__background__img {
     position: absolute;
     width: 100%;
@@ -18,8 +14,13 @@ body {
     z-index: -1;
 }
 
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
 .header {
-    padding: 35px 135px 0px 135px
+    padding-top: 35px;
 }
 
 .top__header {
@@ -37,7 +38,7 @@ body {
 
 .phone__top__header {
     margin-left: 18px;
-    margin-right: 618px;
+    width: 100%;
 }
 
 .icons__top__header {
@@ -49,6 +50,7 @@ body {
     margin-top: 15px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-family: "JosefinSans-SemiBold";
     font-size: 20px;
     height: 60px;
@@ -101,7 +103,6 @@ body {
 
 .left__content {
     margin-top: 105px;
-    margin-left: 135px;
 }
 
 .left__content__img {
@@ -158,7 +159,7 @@ body {
 }
 
 .about {
-    margin: 203px 135px 120px 161px;
+    margin: 203px 0px 120px 0px;
 }
 
 .head__about {
@@ -179,13 +180,15 @@ body {
 }
 
 .about__box {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
 }
 
 .right__about__box {
-    margin-left: 188px;
-    margin-right: auto;
-    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .design__right__about__box,
@@ -199,11 +202,6 @@ body {
     padding: 30px 20px 20px 20px;
 }
 
-
-.use__right__about__box {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
 
 .experince__right__about__box {
     margin-bottom: 18px;
@@ -229,11 +227,11 @@ body {
     color: #6C6C72;
 }
 
-.background__feature__img {
-    position: absolute;
-    width: 100%;
-    max-height: 1710px;
-    z-index: -1;
+.feature {
+    background-image: url(img/background__feature_img.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .head__feature,
@@ -272,7 +270,7 @@ body {
 }
 
 .comment__feature__img {
-    margin: 63px 48% 26px;
+    margin: 60px 48% 22px;
 }
 
 .head__chat__feature,
@@ -298,18 +296,13 @@ body {
 .feature__box,
 .checkout__box,
 .download,
-.team__box,
 .customers__box,
-.blog__box,
 .connect__blog,
-.footer__box,
 .copyright__box {
     display: flex;
 }
 
 .left__feature__box {
-    margin-left: 175px;
-    max-width: 297px;
     margin-top: 120px;
     text-align: end;
 }
@@ -358,7 +351,8 @@ body {
 }
 
 .support__feature__box {
-    margin: -90px auto 120px auto;
+    margin: -90px auto 0px auto;
+    padding-bottom: 120px;
     text-align: center;
     max-width: 318px;
 }
@@ -370,6 +364,11 @@ body {
     color: #FFFFFF;
     margin-top: 30px;
     margin-bottom: 18px;
+}
+
+.checkout {
+    padding-left: calc(50% - 663px);
+    padding-right: calc(50% - 663px);
 }
 
 .head__checkout,
@@ -385,7 +384,7 @@ body {
 }
 
 .left__arrow__checkout__box {
-    margin: auto 30px auto 72px;
+    margin: auto 20px auto 0px;
 }
 
 .imgs__checkout__box {
@@ -410,18 +409,17 @@ body {
 }
 
 .right__arrow__checkout__box {
-    margin: auto auto auto 285px;
+    margin: auto auto auto 280px;
 }
 
 .slider__checkout {
-    margin: 40px 42% 120px 47%;
+    margin: 40px 41% 120px 45%;
 }
 
 .left__download {
     display: flex;
     flex-direction: column;
     max-width: 570px;
-    margin-left: 136px;
     margin-right: 80px;
     margin-bottom: 162px;
 }
@@ -449,6 +447,15 @@ body {
     margin-right: 25px;
 }
 
+.use {
+    background-image: url(img/background__use_img.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 477px;
+}
+
+
 .background__use__img {
     position: absolute;
     max-height: 477px;
@@ -463,19 +470,24 @@ body {
 
 .use__img {
     margin-top: -35px;
-    margin-left: 235px;
+    margin-left: 10%;
+}
+
+.team {
+    margin-top: 283px;
+}
+
+.team__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 120px;
 }
 
 .head__team,
 .work__customers__box {
     color: #232233;
     padding-top: 0px;
-}
-
-.team__box {
-    gap: 30px;
-    margin-left: 135px;
-    margin-bottom: 120px;
 }
 
 .member__team__box {
@@ -522,7 +534,14 @@ body {
 
 }
 
-.background__customers__img,
+
+.customers {
+    background-image: url(img/background__customers_img.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .background__footer__img {
     position: absolute;
     width: 100%;
@@ -550,7 +569,6 @@ body {
 }
 
 .customers__box {
-    margin-left: 135px;
     gap: 30px;
 }
 
@@ -572,14 +590,15 @@ body {
 
 .slider__dot__customers {
     margin-top: 70px;
-    margin-left: 45%;
+    margin-left: 42%;
     margin-bottom: 105px;
 }
 
 .blog__box {
-    margin-top: 20px;
-    margin-left: 135px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    margin-top: 60px;
 }
 
 .pixel__blog__box,
@@ -617,10 +636,7 @@ body {
 
 .footer {
     margin-top: 248px;
-}
-
-.background__footer__img {
-    max-height: 542px;
+    background-color: #232233;
 }
 
 .connect__footer {
@@ -628,10 +644,11 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin: -130px 135px 0px 135px;
+    margin-top: -130px;
     padding-top: 57px;
     padding-bottom: 57px;
     padding-left: 50px;
+    padding-right: 20px;
     box-shadow: 0 10px 100px rgba(0, 0, 0, .24);
     background: #FFFFFF;
     border-radius: 30px;
@@ -662,7 +679,10 @@ body {
 
 .footer__box {
     color: #FFFFFF;
-    padding: 215px 135px 34px 135px;
+    padding: 215px 0px 34px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
 }
 
 .link__list__status {
@@ -690,7 +710,6 @@ body {
 }
 
 .link__footer__box {
-    margin: 0 66px;
     width: 100%;
 }
 
@@ -723,6 +742,7 @@ body {
 .text__email__form {
     color: #6C6C72;
     margin: 13px auto 13px 18px;
+    border: none;
 }
 
 .button__email__form {
@@ -737,13 +757,10 @@ body {
     background-color: #5956E9;
 }
 
-.line__copyright {
-    margin: 0 133px;
-}
-
 .copyright__box {
     justify-content: center;
     margin: 18px auto;
+    padding-bottom: 18px;
 }
 
 .text__copyright__box {
