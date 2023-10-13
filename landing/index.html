@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="fonts/stylename.css">
     <title>Home Page Appolly</title>
 </head>
@@ -775,7 +776,7 @@
                     update & news</p>
                 <div class="email__form__letter">
                     <input class="text__email__form" type="text" placeholder="Your email address">
-                    <button class="button__email__form">
+                    <button class="button__email__form" id="openModal">
                         <svg class="icon__button__email__form" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_85_0)">
@@ -790,7 +791,50 @@
                             </defs>
                         </svg>
                     </button>
-                </div>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <section class="form">
+                                <h1 class="head__form">CONTACT US</h1>
+                                <form class="form__box" action="#" name="contactForm" id="contactForm">
+                                    <div class="left__form">
+                                        <div class="input-box">
+                                            <label class="required-label" for="firstName">First name</label> <br>
+                                            <input class="input__form" type="text" pattern="^[A-Z][a-z]*$"
+                                                id="firstName" name="firstName" required />
+                                        </div>
+                                        <div class="input-box">
+                                            <label class="required-label" for="lastName">Last name</label> <br>
+                                            <input class="input__form" type="text" pattern="^[A-Z][a-z]*$" id="lastName"
+                                                name="lastName" required />
+                                        </div>
+                                        <div class="input-box">
+                                            <label class="required-label" for="email">E-mail:</label> <br>
+                                            <input class="input__form" type="email" placeholder="example@example.com"
+                                                name="email" id="email" required />
+                                        </div>
+                                        <div class="input-box">
+                                            <label for="phone">Phone number</label> <br>
+                                            <input class="input__form" class="phone__input" type="text"
+                                                pattern="\+[0-9]\(\d{3}\)\d{2}-\d{2}-\d{3}"
+                                                placeholder="+X(XXX)XX-XX-XXX" name="phone" id="phone" />
+                                        </div>
+                                    </div>
+                                    <div class="right__form">
+                                        <div class="input-box message-box">
+                                            <label class="required-label" for="message">Message</label><br>
+                                            <textarea id="message" name="message" required></textarea><br>
+                                        </div>
+                                        <div class="button">
+                                            <input class="input__form form__send" type="submit" id="button"
+                                                value="SEND" />
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
             </article>
         </article>
         <svg class="line__copyright" width="1167" height="1" viewBox="0 0 1167 1" fill="none"
@@ -806,6 +850,7 @@
             <p class="text__copyright__box">Copyright 2021 .Ojjomedia. All Right Reserved.</p>
         </article>
     </footer>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
